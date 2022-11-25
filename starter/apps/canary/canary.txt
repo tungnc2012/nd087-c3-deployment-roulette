@@ -1,0 +1,63 @@
+ ~/udacity-sre  kubectl run debug --rm -i --tty --image nicolaka/netshoot -- /bin/bash                            ok  at udacity-cluster/udacity kube  at 23:51:36 
+If you don't see a command prompt, try pressing enter.
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 2</h1>
+</html>
+bash-5.2# curl 172.20.70.149
+<html>
+<h1>This is version 1</h1>
+</html>
+bash-5.2# 

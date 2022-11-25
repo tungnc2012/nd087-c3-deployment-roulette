@@ -1,0 +1,26 @@
+ ~/udacity-sre  kubectl get all -n udacity                                                                ok  took 6s  at udacity-cluster/udacity kube  at 23:49:27 
+NAME                               READY   STATUS    RESTARTS   AGE
+pod/blue-8475cbdf46-6wpnf          1/1     Running   0          2m29s
+pod/blue-8475cbdf46-gfk4z          1/1     Running   0          2m29s
+pod/blue-8475cbdf46-hl52p          1/1     Running   0          2m29s
+pod/canary-v1-64598c676f-4ffch     1/1     Running   0          2m32s
+pod/canary-v1-64598c676f-8tmg9     1/1     Running   0          2m32s
+pod/canary-v2-5dc9c56687-jfn9v     1/1     Running   0          25s
+pod/canary-v2-5dc9c56687-wb9bk     1/1     Running   0          13s
+pod/hello-world-794458d64d-xttp9   1/1     Running   0          2m40s
+
+NAME                  TYPE           CLUSTER-IP       EXTERNAL-IP                                                                     PORT(S)        AGE
+service/canary-svc    ClusterIP      172.20.70.149    <none>                                                                          80/TCP         83s
+service/hello-world   LoadBalancer   172.20.146.100   a7c51c26caf394537b2e929f4d9a0353-1f5f762cdc703491.elb.us-east-2.amazonaws.com   80:31363/TCP   2m40s
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/blue          3/3     3            3           2m30s
+deployment.apps/canary-v1     2/2     2            2           2m33s
+deployment.apps/canary-v2     2/2     2            2           26s
+deployment.apps/hello-world   1/1     1            1           2m41s
+
+NAME                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/blue-8475cbdf46          3         3         3       2m31s
+replicaset.apps/canary-v1-64598c676f     2         2         2       2m34s
+replicaset.apps/canary-v2-5dc9c56687     2         2         2       27s
+replicaset.apps/hello-world-794458d64d   1         1         1       2m42s
